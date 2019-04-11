@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= metamagic site: "Fitness for Hackers", title: [:site, :title], separator: " | " %>
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <meta property="og:image" content="<%= image_url 'og/hackers-dont-have-to-be-fat.jpg' %>"/>
+  <meta property="og:image:secure_url" content="<%= image_url 'og/hackers-dont-have-to-be-fat.jpg' %>"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:description" content="Fitness for Hackers is a book and a call to action for developers who want to get in shape."/>
+  <meta name="twitter:title" content="Fitness for Hackers"/>
+  <meta name="twitter:image" content="<%= image_url 'og/hackers-dont-have-to-be-fat.jpg' %>"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render "shared/header" %>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+<footer>
+  <%= render "shared/footer" %>
+</footer>
+</html>
