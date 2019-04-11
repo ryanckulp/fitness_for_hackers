@@ -155,12 +155,22 @@ body {
 
 // iPhone 4
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-	// insert
+  .hero {
+    padding-top: 125px;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+
+  .wide-mobile {
+    max-width: 100% !important;
+  }
+
 }
 
 // iPhone 5
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-	// insert
 }
 
 // iPhone 6
