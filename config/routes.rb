@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     delete 'logout', to: "sessions#destroy", as: 'logout'
   end
 
-  # temporary - pre launch
-  post 'subscribe', to: 'waitlist#create'
-  get 'video-guides', to: 'pages#video_guides', as: 'video_guides'
+  %w(videos video-guides).each do |path|
+    get path, to: 'pages#video_guides', as: path.gsub('-', '_')
+  end
 end
