@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.1'
+ruby '2.6.5'
 
 # basic
 gem 'rails', '~>  5.2.0'
@@ -24,11 +24,8 @@ gem 'gravatarify', '~> 3.0.0'
 gem 'metamagic' # easily insert metatags for SEO / opengraph
 gem 'rails_12factor'
 gem 'pg'
-gem 'paperclip', '~> 5.2.0' # incomplete setup - must add resource to existing model
-gem 'aws-sdk-s3' # configure in config/application.rb
 gem 'seed_dump' # import / export seed data from existing db (https://github.com/rroblak/seed_dump)
 gem 'figaro' # private ENV vars for safe deployment
-gem 'rename' # rails g rename:into new_app_name
 gem 'rack-cors', :require => 'rack/cors'
 gem 'httparty' # external HTTP requests
 gem 'slack-notifier'
