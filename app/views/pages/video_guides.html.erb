@@ -1,15 +1,21 @@
-<section class="container hero">
+<section class="container hero video-guides">
   <h1 class="title">Video Guides</h1>
-  <p class="description">Thanks for your patience, guides should be live by Monday, March 2.</p>
+  <p class="description">
+    Watch below or view the entire playlist <%= link_to 'here', 'https://www.youtube.com/playlist?list=PLY1MyaXZUqfzdi44YvAnqKHsZ0s7gyFxL', target: :_blank %>.
+  </p>
 
   <% @video_guides.in_groups_of(3).each do |guides| %>
     <div class="row">
-    <% guides.each do |workout_name, video_url| %>
+    <% guides.each do |workout_name, video_id| %>
       <div class="column">
-        <%= video_guide_image(workout_name) %>
-        <a class="button button-clear"><%= workout_name %></a>
+        <% if workout_name %>
+          <%= video_guide_image(workout_name) %>
+          <a class="button button-clear openmodale" data-video-id="<%= video_id %>" data-video-title="<%= workout_name %>"><%= workout_name %></a>
+        <% end %>
       </div>
     <% end %>
     </div><br>
   <% end %>
 </section>
+
+<%= render "video_player" %>
