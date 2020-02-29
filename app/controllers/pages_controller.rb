@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   def home
   end
 
-  def thanks
+  def video_guides
   end
 end

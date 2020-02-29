@@ -13,5 +13,5 @@ Rails.application.routes.draw do
 
   # temporary - pre launch
   post 'subscribe', to: 'waitlist#create'
-  get 'thanks', to: 'pages#thanks', as: 'thanks'
+  get 'video-guides', to: 'pages#video_guides', as: 'video_guides'
 end
