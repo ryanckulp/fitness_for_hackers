@@ -1,4 +1,15 @@
 <section class="container hero">
   <h1 class="title">Video Guides</h1>
   <p class="description">Thanks for your patience, guides should be live by Monday, March 2.</p>
+
+  <% @video_guides.in_groups_of(3).each do |guides| %>
+    <div class="row">
+    <% guides.each do |workout_name, video_url| %>
+      <div class="column">
+        <%= video_guide_image(workout_name) %>
+        <a class="button button-clear"><%= workout_name %></a>
+      </div>
+    <% end %>
+    </div><br>
+  <% end %>
 </section>
